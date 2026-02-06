@@ -5,8 +5,8 @@
 class Aidevops < Formula
   desc "AI DevOps Framework - AI-assisted development workflows and automation"
   homepage "https://aidevops.sh"
-  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v2.103.0.tar.gz"
-  sha256 "147863ef5d75ff6b1837dba84b892a3d3a134c4fe7e385dc0002505e2f3fecd2"
+  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v2.104.0.tar.gz"
+  sha256 "fa279920544a805011bc1cadce120e115cc7c46fab486fe9095c3ae354f5ea3b"
   license "MIT"
   head "https://github.com/marcusquinn/aidevops.git", branch: "main"
 
@@ -22,7 +22,7 @@ class Aidevops < Formula
     libexec.install "setup.sh"
     
     # Install agent files
-    (share/"aidevops").install ".agent"
+    (share/"aidevops").install ".agents"
     (share/"aidevops").install "VERSION"
     
     # Create wrapper in bin that calls the libexec script
