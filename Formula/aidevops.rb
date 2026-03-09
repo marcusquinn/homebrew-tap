@@ -5,8 +5,8 @@
 class Aidevops < Formula
   desc "AI DevOps Framework - AI-assisted development workflows and automation"
   homepage "https://aidevops.sh"
-  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v2.164.0.tar.gz"
-  sha256 "85b085f48f0f678e52c960457c7eb88552415a00d771c58af278a0db487bdb07"
+  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v2.164.4.tar.gz"
+  sha256 "f87368f92fba96c07155429c744ed746a0e5eea32424886c0b38123046604326"
   license "MIT"
   head "https://github.com/marcusquinn/aidevops.git", branch: "main"
 
@@ -17,9 +17,11 @@ class Aidevops < Formula
   def install
     # Install the CLI script to libexec (not bin, to avoid double-write conflict)
     libexec.install "aidevops.sh"
+    (libexec/"aidevops.sh").chmod 0755
     
     # Install setup script for manual setup
     libexec.install "setup.sh"
+    (libexec/"setup.sh").chmod 0755
     
     # Install agent files
     (share/"aidevops").install ".agents"
@@ -31,6 +33,7 @@ class Aidevops < Formula
       export AIDEVOPS_SHARE="#{share}/aidevops"
       exec "#{libexec}/aidevops.sh" "$@"
     EOS
+    (bin/"aidevops").chmod 0755
   end
 
   def post_install
