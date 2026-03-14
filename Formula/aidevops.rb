@@ -1,12 +1,12 @@
 # Homebrew formula for aidevops
-# To install: brew install marcusquinn/tap/aidevops && aidevops update
-# Or: brew tap marcusquinn/tap && brew install aidevops && aidevops update
+# To install: brew install marcusquinn/tap/aidevops
+# Or: brew tap marcusquinn/tap && brew install aidevops
 
 class Aidevops < Formula
   desc "AI DevOps Framework - AI-assisted development workflows and automation"
   homepage "https://aidevops.sh"
-  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v2.172.23.tar.gz"
-  sha256 "2999387ac730bef219d6988eaf35ce73b95da415eb4ffbc5917c3e250e6dea1a"
+  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v2.172.25.tar.gz"
+  sha256 "a49eebdac05248228d876f4eda7392816f16b74f2021c1177503da462e327cfb"
   license "MIT"
   head "https://github.com/marcusquinn/aidevops.git", branch: "main"
 
