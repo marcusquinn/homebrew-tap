@@ -5,8 +5,8 @@
 class Aidevops < Formula
   desc "AI DevOps Framework - AI-assisted development workflows and automation"
   homepage "https://aidevops.sh"
-  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.1.75.tar.gz"
-  sha256 "8fd375e33cb3381605a085b165687c1644dd289d8a9691ef43435cfe80ef8551"
+  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.1.76.tar.gz"
+  sha256 "d7754b2c26fb895f69f9c48772da7f228959a60e4afdc74c9b97090138b1310f"
   license "MIT"
   head "https://github.com/marcusquinn/aidevops.git", branch: "main"
 
@@ -27,9 +27,15 @@ class Aidevops < Formula
     (share/"aidevops").install ".agents"
     (share/"aidevops").install "VERSION"
     
-    # Create wrapper in bin that calls the libexec script
+    # Create wrapper in bin that prefers the git repo copy (always current
+    # via 'aidevops update') over the Homebrew-installed snapshot.
     (bin/"aidevops").write <<~EOS
       #!/usr/bin/env bash
+      # Prefer git repo copy — always current via 'aidevops update'
+      if [[ -f "$HOME/Git/aidevops/aidevops.sh" ]]; then
+        exec bash "$HOME/Git/aidevops/aidevops.sh" "$@"
+      fi
+      # Fall back to Homebrew-installed copy
       export AIDEVOPS_SHARE="#{share}/aidevops"
       exec "#{libexec}/aidevops.sh" "$@"
     EOS
