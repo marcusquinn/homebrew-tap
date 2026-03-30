@@ -6,11 +6,11 @@ class Aidevops < Formula
   desc "AI DevOps Framework - AI-assisted development workflows and automation"
   homepage "https://aidevops.sh"
 <<<<<<< Updated upstream
-  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.5.427.tar.gz"
+  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.5.429.tar.gz"
 =======
-  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.5.427.tar.gz"
+  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.5.429.tar.gz"
 >>>>>>> Stashed changes
-  sha256 "180539bf87c9a6312ab0dd59ad0d68cf171a5b4eb7d482812357f7a023a91d33"
+  sha256 "d759547b7fe1821105ee070d48df35e2087aeee902949bc9ec8cde58920a7f0e"
   license "MIT"
   head "https://github.com/marcusquinn/aidevops.git", branch: "main"
 
