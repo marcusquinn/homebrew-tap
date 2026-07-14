@@ -5,8 +5,8 @@
 class Aidevops < Formula
   desc "AI DevOps Framework - AI-assisted development workflows and automation"
   homepage "https://aidevops.sh"
-  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.32.117.tar.gz"
-  sha256 "d8408b4254377de1d7cc647bade5476c92fe3a58dbece903561943b7c184211e"
+  url "https://github.com/marcusquinn/aidevops/archive/refs/tags/v3.32.118.tar.gz"
+  sha256 "5b0118c4ba8f9007922c2a7dcf6ece3504322a100469a78b7939a8819a01f350"
   license "MIT"
   head "https://github.com/marcusquinn/aidevops.git", branch: "main"
 
